@@ -8,9 +8,9 @@
 </head>
 <body>
 <nav class="navbar">
-    <div class="logo" href="/">
+    <a class="logo" href="/">
         <img src="static/assets/img/logo-light.png" alt="Logo" style="height: 50px">
-    </div>
+    </a>
     <div class="links">
         <a href="/">Home</a>
         <a href="/about">About</a>
@@ -23,8 +23,19 @@
 
 <header class="masthead">
     <div class="intro-container">
-        <h1 class="introduction-heading">Capture, organize,and <br>tackle your to-dos from <br>anywhere.</h1>
-        <p class="introduction-paragraph">Escape the clutter and chaos—unleash your productivity with To Do List.</p>
+        <div class="intro-left">
+            <h1 class="introduction-heading">Capture, organize, and <br>tackle your to-dos from <br>anywhere.</h1>
+            <p class="introduction-paragraph">Escape the clutter and chaos—unleash your productivity with To Do
+                List.</p>
+        </div>
+
+        <div class="header-right">
+            <form>
+                <input type="email" class="email-input" placeholder="Email address">
+                <input type="password" class="password-input" placeholder="Password">
+                <input type="checkbox" id="checkbox"><label for="checkbox">Remember me</label>
+            </form>
+        </div>
     </div>
 </header>
 </body>

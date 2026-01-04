@@ -43,8 +43,9 @@ body {
 .intro-container {
     display: grid;
     height: 100%;
-    grid-template-columns: 50% 50%;
-    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
 }
 
 .introduction-heading {
@@ -61,4 +62,17 @@ body {
     margin-top: 20px;
     align-self: start;
     
+}
+
+form {
+    background-color: black;
+    color: white;
+}
+
+.header-right {
+
+}
+
+ input {
+    height: 30px;
 }
