@@ -64,15 +64,44 @@ body {
     
 }
 
-form {
-    background-color: black;
-    color: white;
-}
-
 .header-right {
-
+    display: flex;
+    justify-content: center;
 }
 
- input {
-    height: 30px;
+form {
+    background-color: #014B78;
+    color: white;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 20px;
+    border-color: white;
+    border-style: solid;
+}
+
+label {
+    font-size: 20px;
+}
+
+ .email-input, .password-input {
+    height: 38px;
+    width: 458px;
+    border-radius: 5px;
+    border: none;
+}
+
+.get-started-button {
+    height: 50px;
+    width: 200px;
+    background-color: #FF6F61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
 }
