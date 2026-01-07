@@ -43,6 +43,8 @@ body {
 .title-container {
     display: flex;
     height: 30vh;
+    flex-direction: row;
+    margin: 0px 16px;
 }
 
 .intro-container {
