@@ -2,49 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href="static/styles.css">
+    <link rel="stylesheet" href="static/assets/css/register.css">
 </head>
 <body>
-<!--Navigation bar-->
-<nav class="register-form-navbar">
-    <a href="/">
-        <img src="static/assets/img/logo-light.png" alt="Logo" style="height: 50px; margin: 20px">
-    </a>
-</nav>
-
-<div class="register-form">
-    <div class="container">
-        <div class="register-left">
-            <form>
-                <h1 style="margin-bottom: 10px;">Register</h1>
-                <label>First Name<br>
-                    <input type="text" name="name" class="firstname-field form-input" id="firstname"
-                           placeholder="First name"><br>
-                </label>
-                <label>Last Name<br>
-                    <input type="text" class="lastname-field form-input" placeholder="Last Name"><br>
-                </label>
-                <label>Password<br>
-                    <input type="password" class="password-field form-input" placeholder="Password"><br>
-                </label>
-                <label>Confirm Password<br>
-                    <input type="password" class="confirm-password-field form-input" placeholder="Confirm password"><br>
-                </label>
-                <label>
-                    <input type="checkbox"> Remember me
-                </label><br>
-                <button class="register-form-btn ">Submit</button>
-                <hr>
-                <p class="login-link">Already have an account? <a href="/">Login</a></p>
-            
-            </form>
+<form class="register-form">
+    <div class="grid-right">
+        <h1>Register to continue</h1>
+        <label>Your Name<br>
+            <input type="text" placeholder="Name" class="input-field">
+        </label><br>
+        <label>Email<br>
+            <input type="email" placeholder="Email" class="input-field">
+        </label><br>
+        <label>Password<br>
+            <input type="password" placeholder="Password" class="input-field">
+        </label><br>
+        <label>
+            <input type="checkbox" class="checkbox">
+            Remember me
+        </label><br>
+        <button class="btn register-btn">Register</button>
+    </div>
+    <div class="grid-left">
+            <img src="static/assets/img/register-image.png" alt="" class="form-image">
         </div>
-    </div>
-    <div class="register-right">
-        <img src="static/assets/img/register-image.png" alt="" style="object-fit: cover; width: 100%; height: 100%;">
-    </div>
-
-</div>
+</form>
 </body>
 </html>
