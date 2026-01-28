@@ -10,24 +10,27 @@
 <form class="register-form">
     <div class="grid-right">
         <h1>Register to continue</h1>
-        <label>Your Name<br>
-            <input type="text" placeholder="Name" class="input-field">
+        <label>Your First Name<br>
+            <input type="text" placeholder="Name" class="input-field" name="first_name">
+        </label><br>
+        <label>Your Last Name<br>
+            <input type="text" placeholder="Name" class="input-field" name="last_name">
         </label><br>
         <label>Email<br>
-            <input type="email" placeholder="Email" class="input-field">
+            <input type="email" placeholder="Email" class="input-field" name="email">
         </label><br>
         <label>Password<br>
-            <input type="password" placeholder="Password" class="input-field">
+            <input type="password" placeholder="Password" class="input-field" name="password">
+        </label><br>
+        <label>Confirm Password<br>
+            <input type="password" placeholder="Confirm Password" class="input-field" name="password">
         </label><br>
         <label>
-            <input type="checkbox" class="checkbox">
+            <input type="checkbox" class="checkbox" name="checkbox">
             Remember me
         </label><br>
         <button class="btn register-btn">Register</button>
     </div>
-    <div class="grid-left">
-            <img src="static/assets/img/register-image.png" alt="" class="form-image">
-        </div>
 </form>
 </body>
 </html>

@@ -34,7 +34,7 @@ body {
 }
 
 .masthead {
-    background-image: url("intro-bg.jpg");
+    background-image: url("../img/intro-bg.jpg");
     height: 500px;
     background-size: cover;
     
