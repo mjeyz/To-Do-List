@@ -1,4 +1,25 @@
-{% include 'partials/header.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <link rel="icon" type="image/x-icon" href="static/assets/favicon.jpg">
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <a class="logo" href="/">
+        <img src="static/assets/img/logo-light.png" alt="Logo" style="height: 50px">
+    </a>
+    <div class="links">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="/">Login</a>
+        <a href="/">Register</a>
+    </div>
+</nav>
 
 <!-- Header Section -->
 <header class="masthead">
@@ -11,7 +32,7 @@
 
         <div class="header-right">
             <div class="header-title">
-                <form class="head-form">
+                <form>
                     <h1>Login</h1>
                     <label> Email <br>
                         <input type="email" class="email-input" placeholder=" Email address">
@@ -48,3 +69,6 @@
 <footer class="footer">
     <p>&copy; 2024 To Do List. All rights reserved.</p>
 </footer>
+
+</body>
+</html>
