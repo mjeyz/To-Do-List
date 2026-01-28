@@ -23,12 +23,11 @@ body {
 }
 
 form {
+    width: 30%;
     background-color: #ffffff;
     padding: 20px;
-    border-radius: 5%;
+    border-radius: 3%;
 }
-
-
 
 .grid-right {
     margin-top: 20px;
@@ -36,6 +35,7 @@ form {
 
 h1 {
     font-size: 2rem;
+    margin-bottom: 10px;
 }
 
 .register-btn {
@@ -52,7 +52,6 @@ h1 {
 @media (min-width: 319px) and (max-width: 480px) {
     h1 {
         font-size: 1.5rem;
-        margin-bottom: 20px;
     }
     form {
         width:100vh;
@@ -61,11 +60,8 @@ h1 {
     }
 
     .input-field {
-        height: 30px;
+        height: 40px;
         font-size: 15px;
-        padding: 15px;
-
-
 }
     label {
         font-size: 13px;

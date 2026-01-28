@@ -1,25 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>To Do List</title>
-    <link rel="stylesheet" href="static/assets/css/styles.css">
-    <link rel="icon" type="image/x-icon" href="static/assets/favicon.jpg">
-</head>
-<body>
-<!-- Navigation Bar -->
-<nav class="navbar">
-    <a class="logo" href="/">
-        <img src="static/assets/img/logo-light.png" alt="Logo" style="height: 50px">
-    </a>
-    <div class="links">
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-        <a href="/">Login</a>
-        <a href="/">Register</a>
-    </div>
-</nav>
+{% include 'partials/header.html' %}
 
 <!-- Header Section -->
 <header class="masthead">
@@ -69,6 +48,3 @@
 <footer class="footer">
     <p>&copy; 2024 To Do List. All rights reserved.</p>
 </footer>
-
-</body>
-</html>
