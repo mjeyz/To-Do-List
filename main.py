@@ -15,6 +15,11 @@ def home():
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():
+    if request.method == "POST":
+        email = request.form.get("email")
+        password = request.form.get('password')
+
+        print(email)
     # if current_user.is_authenticated:
     #     return redirect(url_for('home'))
     return render_template("auth/login.html")

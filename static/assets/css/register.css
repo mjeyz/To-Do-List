@@ -49,6 +49,17 @@ h1 {
     cursor: pointer;
 }
 
+.already-have-account {
+    color: grey;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.already-have-account a {
+    text-decoration: none;
+}
+
+
 @media (min-width: 319px) and (max-width: 480px) {
     h1 {
         font-size: 1.5rem;
