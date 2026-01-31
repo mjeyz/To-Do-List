@@ -1,74 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>To Do List</title>
-    <link rel="stylesheet" href="static/styles.css">
-    <link rel="icon" type="image/x-icon" href="static/assets/favicon.jpg">
-</head>
-<body>
-<!-- Navigation Bar -->
-<nav class="navbar">
-    <a class="logo" href="/">
-        <img src="static/assets/img/logo-light.png" alt="Logo" style="height: 50px">
-    </a>
-    <div class="links">
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-        <a href="/">Login</a>
-        <a href="/">Register</a>
-    </div>
-</nav>
+{% include 'partials/header.html' %}
 
-<!-- Header Section -->
-<header class="masthead">
+<!--
+  Index template — fixes applied below are annotated with "FIXED:" comments.
+  Summary of fixes:
+    - Improved form semantics and accessibility (labels, ids, names, required, autocomplete)
+    - Added form method/action placeholders (adjust to your real endpoints)
+    - Replaced duplicate H1 with single main H1 and secondary headings
+    - Removed inline style on checkbox
+    - Footer year made dynamic with a safe default
+-->
+
+<!-- Header / Hero -->
+<header class="masthead" role="banner">
     <div class="intro-container">
         <div class="intro-left">
-            <h1 class="introduction-heading">Capture, organize, and <br>tackle your to-dos from <br>anywhere.</h1>
-            <p class="introduction-paragraph">Escape the clutter and chaos—unleash your productivity with To Do
-                List.</p>
+            <!-- FIXED: kept single H1 for the page -->
+            <h1 class="introduction-heading">Capture, organize, and tackle your to-dos from anywhere.</h1>
+            <p class="introduction-paragraph">Escape the clutter and chaos—unleash your productivity with To Do List.</p>
         </div>
 
         <div class="header-right">
             <div class="header-title">
-                <form>
-                    <h1>Login</h1>
-                    <label> Email <br>
-                        <input type="email" class="email-input" placeholder=" Email address">
-                    </label><br>
-                    <label> Password <br>
-                        <input type="password" class="password-input" placeholder=" Password">
-                    </label><br>
-                    <label for="checkbox" class="remember-me" style="justify-content: left;">
-                        <input type="checkbox" id="checkbox">
-                        Remember me
-                    </label><br>
-                    <button type="submit" class="get-started-button btn">Get Started</button>
+                <!-- FIXED: added method and action (update endpoint if different) -->
+                <form class="head-form" method="post" action="{{ url_for('login') }}" aria-labelledby="login-heading">
+                    {# FIXED: add CSRF token here if using Flask-WTF: {{ form.csrf_token }} #}
+                    <h2 id="login-heading">Login</h2>
+
+                    <!-- FIXED: added for/id and name attributes for accessibility -->
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" class="email-input" placeholder="Email address" required autocomplete="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input id="password" name="password" type="password" class="password-input" placeholder="Password" required autocomplete="current-password">
+                    </div>
+
+                    <!-- FIXED: removed inline style and linked label to checkbox -->
+                    <div class="form-group remember-me">
+                        <input id="remember" name="remember" type="checkbox">
+                        <label for="remember">Remember me</label>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="get-started-button btn">Get Started</button>
+                    </div>
                 </form>
             </div>
         </div>
     </div>
 </header>
 
-<!--Hero Section-->
-<section class="hero">
-    <div class="hero-content">
-        <div class="title-container">
-            <div class="">
-                <p>WORK SMARTER</p>
-                <H1>Do more With To Do List</H1>
-                <p>Customize the way you organize with easy integrations, automation, and mirroring of your to-dos
-                    across multiple locations.</p>
+<!-- Main / Hero Section -->
+<main role="main">
+    <section class="hero" aria-label="Marketing">
+        <div class="hero-content">
+            <div class="title-container">
+                <p class="eyebrow">WORK SMARTER</p>
+                <!-- FIXED: changed to H2 so there's only one H1 on the page -->
+                <h2>Do more with To Do List</h2>
+                <p>Customize the way you organize with easy integrations, automation, and mirroring of your to-dos across multiple locations.</p>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+</main>
 
-<!-- Footer Section -->
-<footer class="footer">
-    <p>&copy; 2024 To Do List. All rights reserved.</p>
+<!-- Footer -->
+<footer class="footer" role="contentinfo">
+    <!-- FIXED: dynamic year with default to avoid stale copyright -->
+    <p>&copy; {{ current_year | default(2026) }} To Do List. All rights reserved.</p>
 </footer>
-
-</body>
-</html>

@@ -6,6 +6,7 @@ from flask_bootstrap import Bootstrap5
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
+Bootstrap5(app)
 login_manager = LoginManager()
 
 @app.route("/")
@@ -29,7 +30,9 @@ def login():
 def register():
     return render_template("auth/register.html")
 
-
+@app.route("/my-board", methods=['GET', 'POST'])
+def board():
+    return render_template("board.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

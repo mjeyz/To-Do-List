@@ -35,10 +35,10 @@ body {
 
 
 .masthead {
-    background-image: url("assets/img/intro-bg.jpg");
+    /* use absolute static path so the background image resolves correctly */
+    background-image: url('/static/assets/img/intro-bg.jpg');
     height: 500px;
     background-size: cover;
-    
 }
 
 .title-container {
