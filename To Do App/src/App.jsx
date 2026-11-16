@@ -1,12 +1,14 @@
-import { useState } from 'react'
 import './App.css'
+import Sidebar from "./components/sidebar";
+import TaskNavbar from "./components/navbar";
+import MainBody from "./components/mainBody";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <h1>Welcome to the To-Do App</h1>
+      <Sidebar />
+      <TaskNavbar />
+      <MainBody />
     </>
   )
 }
